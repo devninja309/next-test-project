@@ -10,7 +10,7 @@ export default function Navbar() {
 
   const handleNav = (nav: string) => {
     navigate.push(
-      nav === navbar[0] ? "/" : nav.replace(/\s/g, "").toLowerCase()
+      nav === navbar[0] ? "/" : `/${nav.replace(/\s/g, "").toLowerCase()}`
     );
   };
   return (
@@ -19,7 +19,11 @@ export default function Navbar() {
         return (
           <div
             className={
-              navigate.pathname === nav ? styles.activeItem : styles.item
+              navigate.pathname === `/${nav}`
+                ? styles.activeItem
+                : navigate.pathname === "/" && nav === navbar[0]
+                ? styles.activeItem
+                : styles.item
             }
             key={index}
             onClick={() => handleNav(nav)}
