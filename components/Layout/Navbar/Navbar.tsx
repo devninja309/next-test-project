@@ -7,11 +7,12 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Navbar() {
   const navbar = ["Home", "About Us", "Products"];
   const navigate = useRouter();
+  const NavStringType = (str: string) => {
+    return "/" + str.replace(/\s/g, "").toLowerCase();
+  };
 
   const handleNav = (nav: string) => {
-    navigate.push(
-      nav === navbar[0] ? "/" : `/${nav.replace(/\s/g, "").toLowerCase()}`
-    );
+    navigate.push(nav === navbar[0] ? "/" : NavStringType(nav));
   };
   return (
     <div className={styles.root}>
@@ -19,7 +20,7 @@ export default function Navbar() {
         return (
           <div
             className={
-              navigate.pathname === `/${nav}`
+              navigate.pathname === NavStringType(nav)
                 ? styles.activeItem
                 : navigate.pathname === "/" && nav === navbar[0]
                 ? styles.activeItem
