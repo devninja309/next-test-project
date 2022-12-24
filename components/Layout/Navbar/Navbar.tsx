@@ -1,10 +1,33 @@
+import { Inter } from "@next/font/google";
+import { useRouter } from "next/router";
 import styles from "../../../styles/Navbar.module.css";
+
+const inter = Inter({ subsets: ["latin"] });
+
 export default function Navbar() {
+  const navbar = ["Home", "About Us", "Products"];
+  const navigate = useRouter();
+
+  const handleNav = (nav: string) => {
+    navigate.push(
+      nav === navbar[0] ? "/" : nav.replace(/\s/g, "").toLowerCase()
+    );
+  };
   return (
     <div className={styles.root}>
-      <div>Home</div>
-      <div>About Us</div>
-      <div>Products</div>
+      {navbar.map((nav: string, index: number) => {
+        return (
+          <div
+            className={
+              navigate.pathname === nav ? styles.activeItem : styles.item
+            }
+            key={index}
+            onClick={() => handleNav(nav)}
+          >
+            <h3 className={inter.className}>{nav}</h3>
+          </div>
+        );
+      })}
     </div>
   );
 }
