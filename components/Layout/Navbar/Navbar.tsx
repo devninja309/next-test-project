@@ -2,7 +2,7 @@ import { Inter } from "@next/font/google";
 import { useRouter } from "next/router";
 import styles from "../../../styles/Navbar.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Inter({ subsets: ["latin"] });
 
 export default function Navbar() {
   const navbar = ["Home", "About Us", "Products"];
@@ -29,7 +29,7 @@ export default function Navbar() {
             key={index}
             onClick={() => handleNav(nav)}
           >
-            <h3 className={inter.className}>{nav}</h3>
+            <h3 className={font.className}>{nav}</h3>
           </div>
         );
       })}
