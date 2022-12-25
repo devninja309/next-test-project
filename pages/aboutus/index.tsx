@@ -1,5 +1,6 @@
 import { Inter } from "@next/font/google";
 import Image from "next/image";
+import { Grid } from "@material-ui/core";
 import styles from "../../styles/AboutUs.module.css";
 
 const font = Inter({ subsets: ["latin"] });
@@ -7,52 +8,71 @@ const font = Inter({ subsets: ["latin"] });
 export default function AboutUs() {
   return (
     <div className={styles.root}>
-      <div className={styles.contentItem}>
-        <div className={styles.item}>
-          <div className={styles.itemFront}>
+      <div className={styles.title}>
+        <h1 className={font.className}>TEAM.</h1>
+      </div>
+
+      <Grid container spacing={4} className={styles.imageRoot}>
+        <Grid item xs={12} sm={6} md={4}>
+          <div className={styles.imageItem}>
             <Image
-              src="/icon/product_icon.svg"
-              alt="13"
-              width={45}
-              height={45}
+              src="/team/person1.png"
+              width={270}
+              height={270}
+              alt="team"
+            />
+          </div>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <div className={styles.imageItem}>
+            <Image
+              src="/team/person1.png"
+              width={270}
+              height={270}
+              alt="team"
               priority
             />
           </div>
-          <div className={styles.itemMain}>
-            <div className={styles.itemHeader}>
-              <h1 className={font.className}>ECOSYSTEM</h1>
-            </div>
-            <div className={styles.itemDiv}></div>
-            <div className={styles.itemDes}>
-              <h5 className={font.className}>
-                Enable real-time payment and cross-border transaction with zero
-                gas fee.
-              </h5>
-            </div>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <div className={styles.imageItem}>
+            <Image
+              src="/team/person1.png"
+              width={270}
+              height={270}
+              alt="team"
+              priority
+            />
           </div>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <div className={styles.imageItem}>
+            <Image
+              src="/team/person1.png"
+              width={270}
+              height={270}
+              alt="team"
+              priority
+            />
+          </div>
+        </Grid>
+      </Grid>
+
+      <div className={styles.contactUsRoot}>
+        <h1 className={font.className}>OUR CONTACTS.</h1>
+        <div className={styles.contactItem}>
+          <Image src="/icon/position.svg" width={30} height={30} alt="icon" />
+          <span className={font.className}>
+            AZ building, 140 payalebar road #05-15, Singapore 409015
+          </span>
         </div>
-        <div className={styles.item}>
-          <div className={styles.itemFront}>
-            <Image
-              src="/icon/product_icon.svg"
-              alt="13"
-              width={45}
-              height={45}
-              priority
-            />
-          </div>
-          <div className={styles.itemMain}>
-            <div className={styles.itemHeader}>
-              <h1 className={font.className}>PayTech.</h1>
-            </div>
-            <div className={styles.itemDiv}></div>
-            <div className={styles.itemDes}>
-              <h5 className={font.className}>
-                Seamless payment gateway for multiple transaction medium and
-                suitable for any cryptowallet.
-              </h5>
-            </div>
-          </div>
+        <div className={styles.contactItem}>
+          <Image src="/icon/phone.svg" width={30} height={30} alt="icon" />
+          <span className={font.className}>+123456789</span>
+        </div>
+        <div className={styles.contactItem}>
+          <Image src="/icon/email.svg" width={30} height={30} alt="icon" />
+          <span className={font.className}>example@gmail.com</span>
         </div>
       </div>
     </div>
