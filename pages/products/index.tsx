@@ -18,7 +18,6 @@ export default function Products() {
   const init = async () => {
     try {
       const response = await axios.get("/api/staticdata");
-      console.log("data : ", response);
       setData(response.data);
     } catch (e: any) {
       console.log(e);
@@ -26,12 +25,13 @@ export default function Products() {
   };
   useEffect(() => {
     init();
-  }, []);
-
-  console.log("state data: ", data);
+  }, [data.length]);
 
   return (
     <div className={styles.root}>
+      <div className={styles.title}>
+        <h1 className={font.className}>Products☻</h1>
+      </div>
       <div className={styles.contentItem}>
         <Grid container spacing={4} className={styles.imageRoot}>
           {data?.map((item: resProps, key: number) => {
@@ -49,11 +49,7 @@ export default function Products() {
                   </div>
                   <div className={styles.itemMain}>
                     <div className={styles.itemHeader}>
-                      <h1 className={font.className}>
-                        {item.description.length >= 8
-                          ? item.description.slice(0, 8) + "..."
-                          : item.description}
-                      </h1>
+                      <h1 className={font.className}>{item.description}</h1>
                     </div>
                     <div className={styles.itemDiv}></div>
                     <div className={styles.itemDes}>

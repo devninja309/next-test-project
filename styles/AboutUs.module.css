@@ -3,6 +3,9 @@
   min-height: calc(100vh - 100px);
   padding: 150px 0 0 0;
 }
+.title {
+  text-align: center;
+}
 
 .title h1 {
   font-style: normal;
@@ -26,6 +29,7 @@
   overflow: hidden;
   width: 270px;
   height: 270px;
+  margin: auto;
 }
 
 .imageRoot img {

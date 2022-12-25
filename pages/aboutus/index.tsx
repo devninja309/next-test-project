@@ -9,7 +9,7 @@ export default function AboutUs() {
   return (
     <div className={styles.root}>
       <div className={styles.title}>
-        <h1 className={font.className}>TEAM.</h1>
+        <h1 className={font.className}>TEAM☻</h1>
       </div>
 
       <Grid container spacing={4} className={styles.imageRoot}>

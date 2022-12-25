@@ -1,7 +1,20 @@
 .root {
   background: #0d0d0d;
   min-height: calc(100vh - 100px);
-  padding: 200px 50px 50px 50px;
+  padding: 150px 50px 50px 50px;
+}
+.title {
+  text-align: center;
+}
+.title h1 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 50px;
 }
 
 .contentItem {
@@ -26,7 +39,7 @@
 .itemHeader h1 {
   font-style: normal;
   font-weight: 900;
-  font-size: 60px;
+  font-size: 40px;
   line-height: 60px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
