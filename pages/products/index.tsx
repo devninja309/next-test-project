@@ -25,7 +25,7 @@ export default function Products() {
   };
   useEffect(() => {
     init();
-  }, [data.length]);
+  }, [data]);
 
   return (
     <div className={styles.root}>
@@ -36,8 +36,8 @@ export default function Products() {
         <Grid container spacing={4} className={styles.imageRoot}>
           {data?.map((item: resProps, key: number) => {
             return (
-              <Grid item xs={12} sm={12} md={6}>
-                <div className={styles.item} key={key}>
+              <Grid item xs={12} sm={12} md={6} key={key}>
+                <div className={styles.item}>
                   <div className={styles.itemFront}>
                     <Image
                       src="/icon/product_icon.svg"
