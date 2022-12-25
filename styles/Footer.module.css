@@ -1,7 +1,11 @@
 .root {
   text-align: center;
   border-top: solid 1px rgba(255, 255, 255, 0.1);
-  padding: 31px 0 27px 0;
+  padding: 30px;
+  height: 100px;
+  min-height: 100px;
+  align-items: center;
+  background: #0d0d0d;
 }
 
 .root p {
