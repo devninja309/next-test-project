@@ -16,7 +16,7 @@ export default function AboutUs() {
         <Grid item xs={12} sm={6} md={4}>
           <div className={styles.imageItem}>
             <Image
-              src="/team/person1.png"
+              src="/team/person1.jpg"
               width={270}
               height={270}
               alt="team"
@@ -26,18 +26,7 @@ export default function AboutUs() {
         <Grid item xs={12} sm={6} md={4}>
           <div className={styles.imageItem}>
             <Image
-              src="/team/person1.png"
-              width={270}
-              height={270}
-              alt="team"
-              priority
-            />
-          </div>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <div className={styles.imageItem}>
-            <Image
-              src="/team/person1.png"
+              src="/team/person2.jpg"
               width={270}
               height={270}
               alt="team"
@@ -48,7 +37,18 @@ export default function AboutUs() {
         <Grid item xs={12} sm={6} md={4}>
           <div className={styles.imageItem}>
             <Image
-              src="/team/person1.png"
+              src="/team/person3.jpg"
+              width={270}
+              height={270}
+              alt="team"
+              priority
+            />
+          </div>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <div className={styles.imageItem}>
+            <Image
+              src="/team/person4.jpg"
               width={270}
               height={270}
               alt="team"
