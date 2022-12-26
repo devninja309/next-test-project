@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Grid } from "@material-ui/core";
-import styles from "../../styles/Products.module.css";
+import styles from "@/styles/Products.module.css";
 
 const font = Inter({ subsets: ["latin"] });
 
