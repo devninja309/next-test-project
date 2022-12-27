@@ -14,7 +14,7 @@ interface resProps {
 }
 
 export default function Products() {
-  const [data, setData] = useState<any>();
+  const [data, setData] = useState([]);
   const init = async () => {
     try {
       const response = await axios.get("/api/staticdata");
@@ -25,7 +25,7 @@ export default function Products() {
   };
   useEffect(() => {
     init();
-  }, [data]);
+  }, []);
 
   return (
     <div className={styles.root}>
